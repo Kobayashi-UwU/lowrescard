@@ -1,0 +1,313 @@
+<html>
+  <head>
+    <title>SHARE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/42a9d3c2ccd7f17b56eb87d52eddb0a9?family=P22UndergroundW01-Heavy"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="script.js"></script>
+    <style>
+      body {
+        background: #fcb47a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="pc_desktop" style="position: absolute; width: 100%">
+        <img
+          src="character1.png"
+          alt=""
+          style="
+            position: absolute;
+            top: 0;
+            right: 75%;
+            width: 20%;
+            height: auto;
+            filter: drop-shadow(20px 2px 50px #002c4f);
+          "
+        />
+        <center>
+          <center>
+            <h1
+              style="
+                width: 35%;
+                padding-bottom: 1%;
+                font-size: 500%;
+                color: white;
+                text-shadow: rgb(81, 81, 81) 5px 5px 20px;
+              "
+            >
+              WELCOME TO LOWRES!
+            </h1>
+          </center>
+          <form action="" style="padding-left: 30%; padding-right: 30%">
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input type="text" required="required" id="first_name_input" />
+              <span>First Name</span>
+            </div>
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input type="text" required="required" id="last_name_input" />
+              <span>Last Name</span>
+            </div>
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input type="text" required="required" id="member_id" />
+              <span>Member ID (Your favorite Hentai code)</span>
+            </div>
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input type="text" required="required" id="regist_date" />
+              <span>Register Date (The day you become LOWRES)</span>
+            </div>
+            <center>
+              <input
+                type="file"
+                id="uploadBtn"
+                onchange="previewFile()"
+                style="visibility: hidden"
+              />
+              <br />
+              <label for="uploadBtn" style="border-radius: 20px"
+                >Upload Image</label
+              >
+              <br />
+              <br />
+
+              <button
+                id="button_submit"
+                type="button"
+                class="square-button"
+                onclick="displayText()"
+              >
+                Create!
+              </button>
+            </center>
+          </form>
+          <center>
+            <button class="square-button" id="dl-png">Download!</button>
+            <script src="html2canvas.min.js"></script>
+            <script>
+              document.getElementById("dl-png").onclick = function () {
+                const screenshotTarget =
+                  document.getElementById("example-image");
+
+                html2canvas(screenshotTarget).then((canvas) => {
+                  const base64image = canvas.toDataURL("image/png");
+                  var anchor = document.createElement("a");
+                  anchor.setAttribute("href", base64image);
+                  anchor.setAttribute("Download", "my-image.png");
+                  anchor.click();
+                  anchor.remove();
+                });
+              };
+            </script>
+            <div id="displayArea"></div>
+            <div id="example-image" style="width: 65%; height: 95%">
+              <div class="image-container">
+                <img
+                  src="lowrespng.png"
+                  alt=""
+                  style="width: auto; position: relative; max-width: 1000px"
+                />
+                <img
+                  id="result_img"
+                  style="
+                    position: absolute;
+                    right: 16.3%;
+                    top: 36.5%;
+                    height: 235px;
+                    width: 190px;
+                    object-fit: cover;
+                    background: #dfdfdf;
+                  "
+                />
+                <div
+                  class="text-overlay"
+                  style="top: 46.4%; left: 67.5%; width: 50%"
+                >
+                  <p id="first_name_p">First Name</p>
+                </div>
+                <div
+                  class="text-overlay"
+                  style="top: 56%; left: 67.5%; width: 50%"
+                >
+                  <p id="last_name_p">Last Name</p>
+                </div>
+                <div
+                  class="text-overlay"
+                  style="top: 74%; left: 67.5%; width: 50%"
+                >
+                  <p id="member_id_p">MemberID (Your favorite hentai ID)</p>
+                </div>
+                <div
+                  class="text-overlay"
+                  style="top: 91%; left: 67.5%; width: 50%; font-size: 15px"
+                >
+                  <p id="regist_date_p">Register Day (The day you join)</p>
+                </div>
+              </div>
+            </div>
+          </center>
+        </center>
+      </div>
+    </div>
+    <div class="mobile_px5">
+      <div class="pc_desktop" style="position: absolute; width: 100%">
+        <img
+          src="character1.png"
+          alt=""
+          style="
+            position: absolute;
+            top: 10%;
+            right: 75%;
+            width: 20%;
+            height: auto;
+          "
+        />
+        <center>
+          <center>
+            <h1
+              style="
+                width: 35%;
+                padding-bottom: 1%;
+                font-size: 300%;
+                color: white;
+                text-shadow: rgb(81, 81, 81) 5px 5px 20px;
+              "
+            >
+              WELCOME TO LOWRES!
+            </h1>
+          </center>
+          <form action="" style="padding-left: 30%; padding-right: 30%">
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input
+                type="text"
+                required="required"
+                id="first_name_input_mobile"
+              />
+              <span>First Name</span>
+            </div>
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input
+                type="text"
+                required="required"
+                id="last_name_input_mobile"
+              />
+              <span>Last Name</span>
+            </div>
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input
+                type="text"
+                required="required"
+                id="member_id_input_mobile"
+              />
+              <span>Member ID (Your favorite hentai ID)</span>
+            </div>
+            <div class="inputBox" style="padding-bottom: 3%">
+              <input
+                type="text"
+                required="required"
+                id="register_date_input_mobile"
+              />
+              <span>Register Date (The day you become LOWRES)</span>
+            </div>
+
+            <center>
+              <input
+                type="file"
+                id="uploadBtn_mobile"
+                onchange="previewFile_mobile()"
+                style="visibility: hidden"
+              />
+              <br />
+              <label for="uploadBtn_mobile" style="border-radius: 20px"
+                >Upload Image</label
+              >
+              <br />
+              <br />
+              <button
+                id="button_submit_mobile"
+                type="button"
+                class="square-button"
+                onclick="displayText_mobile()"
+              >
+                Create!
+              </button>
+            </center>
+          </form>
+          <center>
+            <button class="square-button" id="dl-png_mobile">Download!</button>
+            <script src="html2canvas.min.js"></script>
+            <script>
+              document.getElementById("dl-png_mobile").onclick = function () {
+                const screenshotTarget = document.getElementById(
+                  "example-image_mobile"
+                );
+
+                html2canvas(screenshotTarget).then((canvas) => {
+                  const base64image = canvas.toDataURL("image/png");
+                  var anchor = document.createElement("a");
+                  anchor.setAttribute("href", base64image);
+                  anchor.setAttribute("Download", "my-image.png");
+                  anchor.click();
+                  anchor.remove();
+                });
+              };
+            </script>
+            <div id="displayArea_mobile"></div>
+            <div id="example-image_mobile" style="width: 100%; height: 95%">
+              <img
+                id="result_img_mobile"
+                style="
+                  position: absolute;
+                  right: 24%;
+                  top: 76.5%;
+                  height: 185px;
+                  width: 145px;
+                  object-fit: cover;
+                  background: #dfdfdf;
+                "
+              />
+              <img
+              src="lowrespng.png"
+              alt=""
+              style="
+                width: auto;
+                position: relative;
+                max-width: 700px;
+              "
+            />
+                
+                <div
+                  class="text-overlay"
+                  style="top: 80.5%; left: 69.5%; width: 50%"
+              >
+                  <p id="first_name_p_mobile">Fist Name</p>
+                </div>
+                <div
+                  class="text-overlay"
+                  style="top: 84%; left: 69.5%; width: 50%"
+                >
+                  <p id="last_name_p_mobile">Last Name</p>
+                </div>
+                <div
+                  class="text-overlay"
+                  style="top: 90.5%; left: 69.5%; width: 50%"
+                >
+                  <p id="member_id_p_mobile">Member ID</p>
+                </div>
+                <div
+                  class="text-overlay"
+                  style="top: 96.8%; left: 69.5%; width: 50%;font-size: 13px;"
+                >
+                  <p id="register_date_p_mobile">Register Date</p>
+                </div>
+              </div>
+            </div>
+          </center>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>
